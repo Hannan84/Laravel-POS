@@ -5,17 +5,13 @@ A simple POS management system with invoice generation, built with **Laravel 10*
 ## Features
 
 -   **POS**
--   **Order Management**
--   **Stock Management**
+-   **Order & Stock Management**
 -   **Product Management**
--   **Employee Management**
--   **Customer Management**
--   **Supplier Management**
+-   **Employee & Customer & Supplier Management**
 -   **Salary Management**
 -   **Attendance Management**
 -   **Role & Permission System**
 -   **User Management**
--   **Database Backup**
 
 ## How to Use
 
@@ -34,12 +30,6 @@ Once you’ve cloned the repository, navigate to the project directory and insta
 ```bash
 cd laravel-point-of-sale
 composer install
-```
-
-Open the project in your preferred code editor:
-
-```bash
-code .
 ```
 
 #### Configure the Environment
