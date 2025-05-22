@@ -39,6 +39,7 @@ Route::get('/', function () {
 // DEFAULT DASHBOARD & PROFILE
 Route::middleware('auth')->group(function () {
  Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+ Route::get('/chart-data', [DashboardController::class, 'getData'])->middleware(['auth']);
 
  Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
  Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');

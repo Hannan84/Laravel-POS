@@ -201,85 +201,140 @@
             apexChartUpdate(chart, e.detail);
         });
     }
-    if (jQuery("#apex-column").length) {
-        options = {
-            chart: {
-                height: 350,
-                type: "bar",
-            },
-            plotOptions: {
-                bar: {
-                    horizontal: !1,
-                    columnWidth: "55%",
-                    endingShape: "rounded",
-                },
-            },
-            dataLabels: {
-                enabled: !1,
-            },
-            stroke: {
-                show: !0,
-                width: 2,
-                colors: ["transparent"],
-            },
-            colors: ["#4788ff", "#37e6b0", "#ff4b4b"],
-            series: [
-                {
-                    name: "Revenue",
-                    data: [76, 85, 101, 98, 87, 105, 76, 85, 101, 98, 87, 105],
-                },
-                {
-                    name: "Cost",
-                    data: [35, 41, 36, 26, 45, 48, 50, 60, 35, 80, 55, 45],
-                },
-            ],
-            xaxis: {
-                categories: [
-                    "Jun",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep",
-                    "Oct",
-                    "Nov",
-                    "Dec",
-                ],
-            },
-            yaxis: {
-                title: {
-                    text: "Tk (thousands)",
-                },
-            },
-            fill: {
-                opacity: 1,
-            },
-            tooltip: {
-                y: {
-                    formatter: function (e) {
-                        return "Tk " + e + " thousands";
-                    },
-                },
-            },
-        };
-        (chart = new ApexCharts(
-            document.querySelector("#apex-column"),
-            options
-        )).render();
-        const body = document.querySelector("body");
-        if (body.classList.contains("dark")) {
-            apexChartUpdate(chart, {
-                dark: true,
-            });
-        }
+    // if (jQuery("#apex-column").length) {
+    //     options = {
+    //         chart: {
+    //             height: 350,
+    //             type: "bar",
+    //         },
+    //         plotOptions: {
+    //             bar: {
+    //                 horizontal: !1,
+    //                 columnWidth: "55%",
+    //                 endingShape: "rounded",
+    //             },
+    //         },
+    //         dataLabels: {
+    //             enabled: !1,
+    //         },
+    //         stroke: {
+    //             show: !0,
+    //             width: 2,
+    //             colors: ["transparent"],
+    //         },
+    //         colors: ["#4788ff", "#37e6b0", "#ff4b4b"],
+    //         series: [
+    //             {
+    //                 name: "Net Profit",
+    //                 data: [44, 55, 57, 56, 61, 58],
+    //             },
+    //             {
+    //                 name: "Revenue",
+    //                 data: [76, 85, 101, 98, 87, 105],
+    //             },
+    //             {
+    //                 name: "Free Cash Flow",
+    //                 data: [35, 41, 36, 26, 45, 48],
+    //             },
+    //         ],
+    //         xaxis: {
+    //             categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    //         },
+    //         yaxis: {
+    //             title: {
+    //                 text: "$ (thousands)",
+    //             },
+    //         },
+    //         fill: {
+    //             opacity: 1,
+    //         },
+    //         tooltip: {
+    //             y: {
+    //                 formatter: function (e) {
+    //                     return "$ " + e + " thousands";
+    //                 },
+    //             },
+    //         },
+    //     };
+    //     (chart = new ApexCharts(
+    //         document.querySelector("#apex-column"),
+    //         options
+    //     )).render();
+    //     const body = document.querySelector("body");
+    //     if (body.classList.contains("dark")) {
+    //         apexChartUpdate(chart, {
+    //             dark: true,
+    //         });
+    //     }
 
-        document.addEventListener("ChangeColorMode", function (e) {
-            apexChartUpdate(chart, e.detail);
-        });
+    //     document.addEventListener("ChangeColorMode", function (e) {
+    //         apexChartUpdate(chart, e.detail);
+    //     });
+    // }
+
+    if (jQuery("#apex-column").length) {
+        fetch("/chart-data")
+            .then((response) => response.json())
+            .then((data) => {
+                let options = {
+                    chart: {
+                        height: 350,
+                        type: "bar",
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            columnWidth: "55%",
+                            endingShape: "rounded",
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        colors: ["transparent"],
+                    },
+                    colors: ["#4788ff", "#ff4b4b", "#37e6b0"],
+                    series: data.series,
+                    xaxis: {
+                        categories: data.categories,
+                    },
+                    yaxis: {
+                        title: {
+                            text: "Tk (thousands)",
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "Tk " + val;
+                            },
+                        },
+                    },
+                };
+
+                let chart = new ApexCharts(
+                    document.querySelector("#apex-column"),
+                    options
+                );
+                chart.render();
+
+                const body = document.querySelector("body");
+                if (body.classList.contains("dark")) {
+                    apexChartUpdate(chart, { dark: true });
+                }
+
+                document.addEventListener("ChangeColorMode", function (e) {
+                    apexChartUpdate(chart, e.detail);
+                });
+            });
     }
+
     if (jQuery("#apex-mixed-chart").length) {
         options = {
             chart: {

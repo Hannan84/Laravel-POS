@@ -31,8 +31,65 @@
                                     <img src="../assets/images/product/1.png" class="img-fluid" alt="image">
                                 </div>
                                 <div>
+                                    <p class="mb-2">Total Sell</p>
+                                    <h4>Tk {{ $total_sell }}</h4>
+                                </div>
+                            </div>
+                            <div class="iq-progress-bar mt-2">
+                                <span class="bg-info iq-progress progress-1" data-percent="85">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4 card-total-sale">
+                                <div class="icon iq-icon-box-2 bg-info-light">
+                                    <img src="../assets/images/product/1.png" class="img-fluid" alt="image">
+                                </div>
+                                <div>
+                                    <p class="mb-2">Cost</p>
+                                    <h4>Tk {{ $cost }}</h4>
+                                </div>
+                            </div>
+                            <div class="iq-progress-bar mt-2">
+                                <span class="bg-info iq-progress progress-1" data-percent="85">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4 card-total-sale">
+                                <div class="icon iq-icon-box-2 bg-info-light">
+                                    <img src="../assets/images/product/1.png" class="img-fluid" alt="image">
+                                </div>
+                                <div>
+                                    <p class="mb-2">Profit</p>
+                                    <h4>Tk {{ $profit }}</h4>
+                                </div>
+                            </div>
+                            <div class="iq-progress-bar mt-2">
+                                <span class="bg-info iq-progress progress-1" data-percent="85">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4 card-total-sale">
+                                <div class="icon iq-icon-box-2 bg-info-light">
+                                    <img src="../assets/images/product/1.png" class="img-fluid" alt="image">
+                                </div>
+                                <div>
                                     <p class="mb-2">Total Paid</p>
-                                    <h4>$ {{ $total_paid }}</h4>
+                                    <h4>Tk {{ $total_paid }}</h4>
                                 </div>
                             </div>
                             <div class="iq-progress-bar mt-2">
@@ -51,7 +108,7 @@
                                 </div>
                                 <div>
                                     <p class="mb-2">Total Due</p>
-                                    <h4>$ {{ $total_due }}</h4>
+                                    <h4>Tk {{ $total_due }}</h4>
                                 </div>
                             </div>
                             <div class="iq-progress-bar mt-2">
@@ -112,7 +169,7 @@
             <div class="card card-block card-stretch card-height">
                 <div class="card-header d-flex align-items-center justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">Revenue Vs Cost</h4>
+                        <h4 class="card-title">Revenue - Cost - Profit</h4>
                     </div>
                     <div class="card-header-toolbar d-flex align-items-center">
                         <div class="dropdown">
