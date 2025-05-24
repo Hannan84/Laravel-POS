@@ -25,7 +25,7 @@
                             <div class="col-md-12">
                                 <div class="profile-img-edit">
                                     <div class="crm-profile-img-edit">
-                                        <img class="crm-profile-pic rounded-circle avatar-100" id="image-preview" src="{{ asset('assets/images/product/default.webp') }}" alt="profile-pic">
+                                        <img class="crm-profile-pic rounded-circle avatar-100" id="image-preview" src="{{ asset('assets/images/product/product_image.png') }}" alt="profile-pic">
                                     </div>
                                 </div>
                             </div>

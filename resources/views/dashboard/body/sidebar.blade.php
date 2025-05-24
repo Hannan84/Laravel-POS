@@ -2,7 +2,7 @@
 <div class="iq-sidebar sidebar-default ">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
         <a href="{{ route('dashboard') }}" class="header-logo">
-            <img src="{{ asset('assets/images/logo.png') }}" class="img-fluid rounded-normal light-logo" alt="logo"><h5 class="logo-title light-logo ml-3">POSDash</h5>
+            <img src="../assets/images/small/09.png" class="img-fluid rounded-normal light-logo" alt="logo"><h5 class="logo-title light-logo ml-3">POS</h5>
         </a>
         <div class="iq-menu-bt-sidebar ml-0">
             <i class="las la-bars wrapper-menu"></i>
@@ -225,14 +225,14 @@
                 </li>
                 @endif
 
-                @if (auth()->user()->can('database.menu'))
+                {{--@if (auth()->user()->can('database.menu'))
                 <li class="{{ Request::is('database/backup*') ? 'active' : '' }}">
                     <a href="{{ route('backup.index') }}" class="svg-icon">
                         <i class="fa-solid fa-database"></i>
                         <span class="ml-3">Backup Database</span>
                     </a>
                 </li>
-                @endif
+                @endif--}}
             </ul>
         </nav>
         <div class="p-3"></div>
