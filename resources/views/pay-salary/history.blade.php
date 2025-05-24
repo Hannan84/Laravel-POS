@@ -77,7 +77,7 @@
                             </td>
                             <td>{{ $paySalary->employee->name }}</td>
                             <td>{{ Carbon\Carbon::parse($paySalary->date)->format('M/Y') }}</td>
-                            <td>${{ $paySalary->paid_amount }}</td>
+                            <td>Tk {{ $paySalary->paid_amount }}</td>
                             <td>
                                 <span class="btn btn-success text-white mr-2">Full Paid</span>
                             </td>

@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="iq-progress-bar mt-2">
-                                <span class="bg-info iq-progress progress-1" data-percent="85">
+                                <span class="bg-primary iq-progress progress-1" data-percent="85">
                                 </span>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="iq-progress-bar mt-2">
-                                <span class="bg-info iq-progress progress-1" data-percent="85">
+                                <span class="bg-warning iq-progress progress-1" data-percent="85">
                                 </span>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="iq-progress-bar mt-2">
-                                <span class="bg-info iq-progress progress-1" data-percent="85">
+                                <span class="bg-primary iq-progress progress-1" data-percent="85">
                                 </span>
                             </div>
                         </div>
@@ -171,7 +171,7 @@
                     <div class="header-title">
                         <h4 class="card-title">Revenue - Cost - Profit</h4>
                     </div>
-                    <div class="card-header-toolbar d-flex align-items-center">
+                    <!-- <div class="card-header-toolbar d-flex align-items-center">
                         <div class="dropdown">
                             <span class="dropdown-toggle dropdown-bg btn" id="dropdownMenuButton002"
                                 data-toggle="dropdown">
@@ -184,7 +184,7 @@
                                 <a class="dropdown-item" href="#">Weekly</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="card-body">
                     <div id="apex-column" style="min-height: 360px;"></div>
@@ -198,7 +198,7 @@
                     <div class="header-title">
                         <h4 class="card-title">Top Products</h4>
                     </div>
-                    <div class="card-header-toolbar d-flex align-items-center">
+                    <!-- <div class="card-header-toolbar d-flex align-items-center">
                         <div class="dropdown">
                             <span class="dropdown-toggle dropdown-bg btn" id="dropdownMenuButton006"
                                 data-toggle="dropdown">
@@ -211,7 +211,7 @@
                                 <a class="dropdown-item" href="#">Week</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled row top-product mb-0">
@@ -255,7 +255,7 @@
                         <div class="style-text text-left">
                             <h5 class="mb-2">{{ $product->product_name }}</h5>
                             <p class="mb-2">Stock : {{ $product->product_store }}</p>
-                            <p class="mb-0">Price : ${{ $product->selling_price }}</p>
+                            <p class="mb-0">Price : Tk {{ $product->selling_price }}</p>
                         </div>
                     </div>
                 </div>

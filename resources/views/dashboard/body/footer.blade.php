@@ -10,7 +10,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <span class="mr-1"><script>document.write(new Date().getFullYear())</script>©</span> <a href="{{ route('dashboard') }}" class="">POS Dashboard</a>.
+                        <span class="mr-1"><script>document.write(new Date().getFullYear())</script>©</span> <a href="{{ route('dashboard') }}" class="">Happy POS</a>.
                     </div>
                 </div>
             </div>
