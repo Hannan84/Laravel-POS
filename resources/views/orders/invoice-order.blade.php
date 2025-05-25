@@ -100,9 +100,9 @@
                         </div>
                         {{-- <div class="invoice-informeshon-footer">
                             <ul>
-                                <li><a href="https://themeforest.net/user/themevessel/portfolio">www.themevessel.com</a></li>
-                                <li><a href="mailto:sales@hotelempire.com">info@themevessel.com</a></li>
-                                <li><a href="tel:+088-01737-133959">+088 01737 133959</a></li>
+                                <li><a href=""></a></li>
+                                <li><a href="mailto:"></a></li>
+                                <li><a href="tel:">+088</a></li>
                             </ul>
                         </div> --}}
                     </div>
