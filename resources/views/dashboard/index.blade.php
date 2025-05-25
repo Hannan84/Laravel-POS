@@ -220,7 +220,7 @@
                             <div class="card card-block card-stretch card-height mb-0">
                                 <div class="card-body">
                                     <div class="bg-warning-light rounded">
-                                        <img src="{{ $product->product_image ? asset('storage/products/'.$product->product_image) : asset('assets/images/product/product_image.png') }}" class="style-img img-fluid m-auto p-3" alt="image">
+                                        <a href="{{ route('products.show', $product->id) }}"><img src="{{ $product->product_image ? asset('storage/products/'.$product->product_image) : asset('assets/images/product/product_image.png') }}" class="style-img img-fluid m-auto p-3" alt="image"></a>
                                     </div>
                                     <div class="style-text text-left mt-3">
                                         <h5 class="mb-1">{{ $product->product_name }}</h5>
@@ -250,7 +250,7 @@
                 <div class="card-body card-item-right">
                     <div class="d-flex align-items-top">
                         <div class="bg-warning-light rounded">
-                            <img src="../assets/images/product/05.png" class="style-img img-fluid m-auto" alt="image">
+                            <a href="{{ route('products.show', $product->id) }}"><img src="../assets/images/product/05.png" class="style-img img-fluid m-auto" alt="image"></a>
                         </div>
                         <div class="style-text text-left">
                             <h5 class="mb-2">{{ $product->product_name }}</h5>
